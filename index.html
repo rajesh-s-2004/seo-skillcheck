@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Free SEO skill assessment for beginners and experienced SEO professionals. Test your knowledge and discover what to improve next.">
-<title>SEO SkillCheck | Test Your SEO Knowledge</title>
+<meta name="theme-color" content="#111a2e">\n<title>SEO SkillCheck | Test Your SEO Knowledge</title>
 <style>
 :root{--ink:#172033;--muted:#65718a;--blue:#3157d5;--blue2:#eaf0ff;--line:#e4e9f2;--bg:#f6f8fc;--green:#16845b;--red:#c13b4a;--white:#fff}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
@@ -16,12 +16,12 @@ main{max-width:980px;margin:38px auto;padding:0 18px}.hero{background:linear-gra
 .levels{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.level{border:1px solid var(--line);border-radius:13px;padding:15px;text-align:left;background:#fff;cursor:pointer;transition:.15s}.level:hover,.level.active{border-color:var(--blue);background:var(--blue2)}.level strong{display:block;font-size:15px}.level small{color:var(--muted)}
 .btn{border:0;border-radius:11px;padding:12px 18px;background:var(--blue);color:#fff;font-weight:750;cursor:pointer;font-size:14px}.btn:disabled{opacity:.45;cursor:not-allowed}.btn.secondary{background:#edf1f8;color:#26334e}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
 .hidden{display:none!important}.topline{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--muted);font-size:13px}.bar{height:8px;background:#edf0f6;border-radius:99px;overflow:hidden;margin:12px 0 22px}.bar span{display:block;height:100%;width:0;background:var(--blue);transition:width .2s}
-.question{font-size:21px;font-weight:750;line-height:1.35;margin:10px 0 18px}.options{display:grid;gap:10px}.option{border:1px solid var(--line);border-radius:12px;padding:13px 15px;display:flex;gap:11px;align-items:flex-start;cursor:pointer;background:#fff}.option:hover{border-color:#9aacee}.option input{margin-top:5px;accent-color:var(--blue)}.option.selected{border-color:var(--blue);background:var(--blue2)}
+.question{font-size:21px;font-weight:750;line-height:1.35;margin:10px 0 18px}.options{display:grid;gap:10px}.option{border:1px solid var(--line);border-radius:12px;padding:13px 15px;display:flex;gap:11px;align-items:flex-start;cursor:pointer;background:#fff}.option:hover{border-color:#9aacee}.option:focus-within{outline:2px solid #3157d5;outline-offset:2px}.option input{margin-top:5px;accent-color:var(--blue)}.option.selected{border-color:var(--blue);background:var(--blue2)}
 .feedback{margin-top:16px;padding:15px;border-radius:12px;background:#f1f5fb;font-size:14px}.feedback.good{background:#eaf7f1}.feedback.bad{background:#fff0f1}.feedback strong{display:block;margin-bottom:5px}
 .resultscore{font-size:54px;font-weight:850;letter-spacing:-2px;color:var(--blue)}.resultgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.metric{background:#f5f7fb;border-radius:12px;padding:15px}.metric strong{display:block;font-size:20px}.categoryrow{display:grid;grid-template-columns:130px 1fr 45px;gap:10px;align-items:center;margin:12px 0;font-size:13px}.catbar{height:9px;background:#edf0f6;border-radius:99px;overflow:hidden}.catbar span{height:100%;display:block;background:#5575df}
 .tip{border-left:3px solid var(--blue);padding:10px 13px;background:#f4f6ff;border-radius:0 10px 10px 0;margin:10px 0;font-size:14px}
 footer{text-align:center;color:var(--muted);font-size:12px;padding:30px 15px}
-@media(max-width:650px){main{margin:20px auto}.hero{padding:27px 22px}.panel{padding:19px}.levels{grid-template-columns:1fr}.resultgrid{grid-template-columns:1fr}.categoryrow{grid-template-columns:105px 1fr 35px}.tag{display:none}}
+@media print{body{background:#fff}header,.hero,#setup,.actions{display:none!important}main{margin:0;max-width:none;padding:0}.panel{box-shadow:none;border:0;padding:0}.tip{break-inside:avoid}}\n@media(max-width:650px){main{margin:20px auto}.hero{padding:27px 22px}.panel{padding:19px}.levels{grid-template-columns:1fr}.resultgrid{grid-template-columns:1fr}.categoryrow{grid-template-columns:105px 1fr 35px}.tag{display:none}}
 </style>
 </head>
 <body>
@@ -30,8 +30,8 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:30px 15px}
 <section class="hero">
  <div class="eyebrow">Learn • Assess • Improve</div>
  <h1>How strong is your SEO knowledge?</h1>
- <p>Answer practical SEO questions, understand why an answer works, and get a category-wise snapshot of your current knowledge.</p>
- <div class="pills"><span class="pill">30 scenario-based questions</span><span class="pill">Beginner to Advanced</span><span class="pill">Instant feedback</span></div>
+ <p>Answer practical SEO questions, review why an answer is best, and get a category-wise snapshot of your current knowledge.</p>
+ <div class="pills"><span class="pill">30 scenario-based questions</span><span class="pill">Beginner to Advanced</span><span class="pill">Answer explanations</span></div>
 </section>
 <section id="setup" class="panel">
  <h2>Choose your assessment level</h2><p class="sub">Select the level that best matches your current experience. This is a learning self-check, not a professional certification.</p>
@@ -57,7 +57,7 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:30px 15px}
  <div class="resultgrid"><div class="metric"><strong id="correctMetric">0</strong><span class="sub">Correct answers</span></div><div class="metric"><strong id="levelMetric">Beginner</strong><span class="sub">Selected level</span></div></div>
  <h3>Category-wise performance</h3><div id="categoryScores"></div>
  <h3>What to improve next</h3><div id="recommendations"></div>
- <div class="tip">Use this result as a learning guide. A quiz cannot fully measure practical SEO execution, communication, or business impact.</div>
+ <div class="tip">Use this result as a learning guide. Category scores are based on the questions asked in this level, so treat small-sample percentages as directional. This quiz cannot fully measure practical SEO execution, communication, or business impact.</div>
  <div class="actions"><button id="restart" class="btn">Retake assessment</button><button id="print" class="btn secondary">Print / Save result</button></div>
 </section>
 </main>
@@ -105,12 +105,106 @@ const categories=["Keyword Research","On-Page SEO","Technical SEO","Off-Page SEO
 let level="Beginner", questions=[], index=0, score=0, locked=false, answers=[];
 document.querySelectorAll(".level").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".level").forEach(x=>x.classList.remove("active"));b.classList.add("active");level=b.dataset.level;}));
 const $=id=>document.getElementById(id);
-function shuffle(a){return [...a].sort(()=>Math.random()-.5)}
-$("start").onclick=()=>{questions=shuffle(bank[level]);index=0;score=0;answers=[];$("setup").classList.add("hidden");$("results").classList.add("hidden");$("quiz").classList.remove("hidden");render()};
-function render(){locked=false;let q=questions[index];$("levelLabel").textContent=level+" level";$("counter").textContent=`Question ${index+1} of ${questions.length}`;$("progress").style.width=(index/questions.length*100)+"%";$("category").textContent=q[0];$("question").textContent=q[1];$("feedback").className="feedback hidden";$("feedback").innerHTML="";$("options").innerHTML="";
-q.slice(2,6).forEach((opt,i)=>{let label=document.createElement("label");label.className="option";label.innerHTML=`<input type="radio" name="answer" value="${i}"><span><b>${String.fromCharCode(65+i)}.</b> ${opt}</span>`;label.querySelector("input").addEventListener("change",()=>{document.querySelectorAll(".option").forEach(x=>x.classList.remove("selected"));label.classList.add("selected")});$("options").appendChild(label)});
-$("check").classList.remove("hidden");$("check").disabled=false;$("next").classList.add("hidden")}
-$("check").onclick=()=>{if(locked)return;let selected=document.querySelector('input[name="answer"]:checked');if(!selected){alert("Please select an answer first.");return}locked=true;let q=questions[index],choice=+selected.value,correct=q[6]===choice;if(correct)score++;answers.push({category:q[0],correct});document.querySelectorAll('input[name="answer"]').forEach(x=>x.disabled=true);let fb=$("feedback");fb.className="feedback "+(correct?"good":"bad");fb.innerHTML=`<strong>${correct?"Correct answer!":"Not quite — review this concept."}</strong>${q[7]}<br><br><b>Option review:</b> ${q[8]}`;$("check").classList.add("hidden");$("next").classList.remove("hidden");$("next").textContent=index===questions.length-1?"View my result →":"Next question →";$("progress").style.width=((index+1)/questions.length*100)+"%"};
+
+function shuffleArray(items){
+  const a=[...items];
+  for(let i=a.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+// Spread correct answers across A/B/C/D as evenly as possible in each attempt.
+function prepareQuestions(levelName){
+  const source=shuffleArray(bank[levelName]);
+  const positions=shuffleArray(
+    Array.from({length:source.length},(_,i)=>i%4)
+  );
+  return source.map((q,i)=>{
+    const originalOptions=q.slice(2,6);
+    const correctText=originalOptions[q[6]];
+    const wrongIndexes=originalOptions.map((_,n)=>n).filter(n=>n!==q[6]);
+    const reasonParts=(q[8]||"").split(/;\\s*/);
+    const reasonByOriginalIndex={};
+    wrongIndexes.forEach((originalIndex,reasonIndex)=>{
+      reasonByOriginalIndex[originalIndex]=reasonParts[reasonIndex]||"This option is less suitable for the situation described.";
+    });
+    const target=positions[i];
+    const choiceItems=shuffleArray(wrongIndexes.map(originalIndex=>({
+      text:originalOptions[originalIndex],
+      reason:reasonByOriginalIndex[originalIndex]
+    })));
+    choiceItems.splice(target,0,{
+      text:correctText,
+      reason:"This is the best answer for the situation described."
+    });
+    return {
+      category:q[0], prompt:q[1],
+      options:choiceItems.map(item=>item.text),
+      correctIndex:target, correctText,
+      explanation:q[7],
+      optionReasons:choiceItems.map(item=>item.reason)
+    };
+  });
+}
+
+$("start").onclick=()=>{
+  questions=prepareQuestions(level);index=0;score=0;answers=[];
+  $("setup").classList.add("hidden");$("results").classList.add("hidden");
+  $("quiz").classList.remove("hidden");render();
+};
+
+function render(){
+  locked=false;
+  const q=questions[index];
+  $("levelLabel").textContent=level+" level";
+  $("counter").textContent=`Question ${index+1} of ${questions.length}`;
+  $("progress").style.width=(index/questions.length*100)+"%";
+  $("category").textContent=q.category;
+  $("question").textContent=q.prompt;
+  $("feedback").className="feedback hidden";
+  $("feedback").innerHTML="";
+  $("options").innerHTML="";
+  q.options.forEach((opt,i)=>{
+    let label=document.createElement("label");
+    label.className="option";
+    label.innerHTML=`<input type="radio" name="answer" value="${i}"><span><b>${String.fromCharCode(65+i)}.</b> ${opt}</span>`;
+    label.querySelector("input").addEventListener("change",()=>{
+      document.querySelectorAll(".option").forEach(x=>x.classList.remove("selected"));
+      label.classList.add("selected");
+    });
+    $("options").appendChild(label);
+  });
+  $("check").classList.remove("hidden");$("check").disabled=false;
+  $("next").classList.add("hidden");
+}
+
+$("check").onclick=()=>{
+  if(locked)return;
+  const selected=document.querySelector('input[name="answer"]:checked');
+  if(!selected){alert("Please select an answer first.");return}
+  locked=true;
+  const q=questions[index],choice=+selected.value;
+  const correct=q.correctIndex===choice;
+  if(correct)score++;
+  answers.push({category:q.category,correct});
+  document.querySelectorAll('input[name="answer"]').forEach(x=>x.disabled=true);
+  const fb=$("feedback");
+  const chosen=q.options[choice];
+  fb.className="feedback "+(correct?"good":"bad");
+  fb.innerHTML=`<strong>${correct?"Correct — good choice!":"Not the best choice — review the concept."}</strong>
+    <b>Your answer:</b> ${chosen}<br>
+    <b>Feedback:</b> ${q.optionReasons[choice]}<br><br>
+    <b>Best answer:</b> ${q.correctText}<br>
+    <b>Why it works:</b> ${q.explanation}<br><br>
+    <b>Option review:</b><br>${q.options.map((opt,i)=>`${String.fromCharCode(65+i)}. ${opt} — ${q.optionReasons[i]}`).join("<br>")}`;
+  $("check").classList.add("hidden");
+  $("next").classList.remove("hidden");
+  $("next").textContent=index===questions.length-1?"View my result →":"Next question →";
+  $("progress").style.width=((index+1)/questions.length*100)+"%";
+};
+
 $("next").onclick=()=>{if(index<questions.length-1){index++;render()}else showResults()};
 function showResults(){$("quiz").classList.add("hidden");$("results").classList.remove("hidden");let pct=Math.round(score/questions.length*100);$("score").textContent=score+"/"+questions.length;$("correctMetric").textContent=score+" / "+questions.length;$("levelMetric").textContent=level;$("resultTitle").textContent=pct>=80?"Strong performance":pct>=60?"Good foundation":"Your learning plan starts here";$("summary").textContent=`You answered ${score} out of ${questions.length} questions correctly (${pct}%). Use the category breakdown to choose what to practise next.`;let html="",tips=[];categories.forEach(cat=>{let relevant=answers.filter(a=>a.category===cat),right=relevant.filter(a=>a.correct).length;if(!relevant.length)return;let p=Math.round(right/relevant.length*100);html+=`<div class="categoryrow"><span>${cat}</span><div class="catbar"><span style="width:${p}%"></span></div><b>${right}/${relevant.length}</b></div>`;if(p<100)tips.push(cat)});$("categoryScores").innerHTML=html;$("recommendations").innerHTML=tips.length?tips.map(t=>`<div class="tip"><b>${t}:</b> Review the explanations, revisit the fundamentals and practise a real website example.</div>`).join(""):"<div class='tip'>Great result across the categories in this level. Move to the next difficulty and validate your knowledge with a real website audit.</div>";}
 $("restart").onclick=()=>{$("results").classList.add("hidden");$("setup").classList.remove("hidden")};$("print").onclick=()=>window.print();
